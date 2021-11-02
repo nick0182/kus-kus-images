@@ -1,0 +1,13 @@
+s3:
+  bucket:
+    name: kuskus-main-images
+  image:
+    empty: no-image.jpeg
+
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          filter:
+            CommonsRequestLoggingFilter: DEBUG
