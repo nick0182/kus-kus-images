@@ -17,7 +17,7 @@ public class StepImageService extends ImageService {
 
     @Override
     protected String resolveKey(String imageId) {
-        String folder = imageId.split("\\.")[0];
-        return folder + "/" + imageId + ".jpeg";
+        String[] imageIdSplit = imageId.split("\\.");
+        return imageIdSplit[0] + "/" + imageIdSplit[1] + ".jpeg";
     }
 }

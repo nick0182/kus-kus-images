@@ -20,8 +20,11 @@ import static software.amazon.awssdk.utils.UserHomeDirectoryUtils.userHomeDirect
 @SpringBootApplication
 public class KusKusImagesApplication {
 
-    @Value("${s3.bucket.name}")
-    String bucketName;
+    @Value("${s3.bucket.main}")
+    String mainImagesBucketName;
+
+    @Value("${s3.bucket.step}")
+    String stepImagesBucketName;
 
     @Value("${s3.image.empty}")
     String emptyImageName;
@@ -64,11 +67,11 @@ public class KusKusImagesApplication {
 
     @Bean
     ImageService mainImageService(S3AsyncClient s3AsyncClient) {
-        return new MainImageService(s3AsyncClient, bucketName, emptyImageName);
+        return new MainImageService(s3AsyncClient, mainImagesBucketName, emptyImageName);
     }
 
     @Bean
     ImageService stepImageService(S3AsyncClient s3AsyncClient) {
-        return new StepImageService(s3AsyncClient, bucketName, emptyImageName);
+        return new StepImageService(s3AsyncClient, stepImagesBucketName, emptyImageName);
     }
 }

@@ -1,6 +1,7 @@
 s3:
   bucket:
-    name: kuskus-main-images
+    main: kuskus-main-images
+    step: kuskus-step-images
   image:
     empty: no-image.jpeg
 
