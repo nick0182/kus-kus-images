@@ -12,3 +12,6 @@ logging:
         web:
           filter:
             CommonsRequestLoggingFilter: DEBUG
+spring:
+  profiles:
+    active: local
