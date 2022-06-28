@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: kus-kus-images
-          image: blink182u2/kus-kus-images:0.0.1-SNAPSHOT
+          image: 848500148350.dkr.ecr.me-south-1.amazonaws.com/kus-kus-images:0.0.1
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: prod
